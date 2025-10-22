@@ -18,7 +18,7 @@ const MainLayouts = () => {
                     </h1>
                 </div>
             )} */}
-            <div className='flex-1 w-11/12 mx-auto min-h-screen'>
+            <div className='flex-1 w-11/12 mx-auto '>
                 {location.pathname === "/" && <Banner />}
                 <Outlet></Outlet>
             </div>

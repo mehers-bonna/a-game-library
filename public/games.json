@@ -2,7 +2,7 @@
   {
     "id": "1",
     "title": "Player Unknowns Battle Ground: PUBG",
-    "coverPhoto": "https://example.com/images/pubg.png",
+    "coverPhoto": "https://i.ibb.co.com/GfKjJpdC/image1.jpg",
     "category": "FPS",
     "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
     "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps.",
@@ -12,7 +12,7 @@
   {
     "id": "2",
     "title": "Call of Duty: Mobile",
-    "coverPhoto": "https://example.com/images/cod.png",
+    "coverPhoto": "https://i.ibb.co.com/Lz97sNMv/image2.jpg",
     "category": "FPS",
     "downloadLink": "https://www.callofduty.com/mobile",
     "description": "Call of Duty: Mobile brings classic multiplayer maps and modes to your mobile device, offering intense FPS action.",
@@ -22,7 +22,7 @@
   {
     "id": "3",
     "title": "Fortnite",
-    "coverPhoto": "https://example.com/images/fortnite.png",
+    "coverPhoto": "https://i.ibb.co.com/Hf9JwG00/image3.jpg",
     "category": "Battle Royale",
     "downloadLink": "https://www.epicgames.com/fortnite/en-US/home",
     "description": "Fortnite is a battle royale game known for its building mechanics, colorful graphics, and fast-paced combat.",
@@ -32,7 +32,7 @@
   {
     "id": "4",
     "title": "Apex Legends Mobile",
-    "coverPhoto": "https://example.com/images/apex.png",
+    "coverPhoto": "https://i.ibb.co.com/jd7D6x5/image4.jpg",
     "category": "FPS",
     "downloadLink": "https://www.ea.com/games/apex-legends",
     "description": "Apex Legends Mobile is a hero-based battle royale shooter with unique characters, abilities, and fast squad gameplay.",
@@ -42,7 +42,7 @@
   {
     "id": "5",
     "title": "Garena Free Fire",
-    "coverPhoto": "https://example.com/images/freefire.png",
+    "coverPhoto": "https://i.ibb.co.com/KxFkWNqK/image5.jpg",
     "category": "Battle Royale",
     "downloadLink": "https://ff.garena.com/",
     "description": "Free Fire is a survival shooter where 50 players fight to be the last person standing on a remote island.",
@@ -52,7 +52,7 @@
   {
     "id": "6",
     "title": "Minecraft",
-    "coverPhoto": "https://example.com/images/minecraft.png",
+    "coverPhoto": "https://i.ibb.co.com/Psx1RGcN/image6.jpg",
     "category": "Sandbox",
     "downloadLink": "https://www.minecraft.net/en-us",
     "description": "Minecraft lets players build, explore, and survive in a block-based world full of endless possibilities.",
@@ -62,7 +62,7 @@
   {
     "id": "7",
     "title": "Genshin Impact",
-    "coverPhoto": "https://example.com/images/genshin.png",
+    "coverPhoto": "https://i.ibb.co.com/tTBC3t28/image7.jpg",
     "category": "RPG",
     "downloadLink": "https://genshin.hoyoverse.com/",
     "description": "Genshin Impact is an open-world action RPG with elemental combat, stunning visuals, and a rich storyline.",
@@ -72,7 +72,7 @@
   {
     "id": "8",
     "title": "Among Us",
-    "coverPhoto": "https://example.com/images/amongus.png",
+    "coverPhoto": "https://i.ibb.co.com/tw13srhj/image8.jpg",
     "category": "Party",
     "downloadLink": "https://www.innersloth.com/gameAmongUs.php",
     "description": "Among Us is a multiplayer party game where crewmates must complete tasks while impostors sabotage their mission.",
@@ -82,7 +82,7 @@
   {
     "id": "9",
     "title": "Clash of Clans",
-    "coverPhoto": "https://example.com/images/coc.png",
+    "coverPhoto": "https://i.ibb.co.com/67PZxdsv/image9.jpg",
     "category": "Strategy",
     "downloadLink": "https://supercell.com/en/games/clashofclans/",
     "description": "Clash of Clans is a strategy game where players build villages, raise armies, and attack other players.",
@@ -92,7 +92,7 @@
   {
     "id": "10",
     "title": "League of Legends: Wild Rift",
-    "coverPhoto": "https://example.com/images/wildrift.png",
+    "coverPhoto": "https://i.ibb.co.com/pjLn06HR/image10.jpg",
     "category": "MOBA",
     "downloadLink": "https://wildrift.leagueoflegends.com/",
     "description": "Wild Rift brings the popular MOBA experience of League of Legends to mobile with fast-paced 5v5 matches.",
@@ -102,7 +102,7 @@
   {
     "id": "11",
     "title": "Valorant Mobile",
-    "coverPhoto": "https://example.com/images/valorant.png",
+    "coverPhoto": "https://i.ibb.co.com/wr6P1Xyv/image11.jpg",
     "category": "FPS",
     "downloadLink": "https://playvalorant.com/",
     "description": "Valorant Mobile is a tactical shooter with unique agents, strategic abilities, and competitive gameplay.",
@@ -112,7 +112,7 @@
   {
     "id": "12",
     "title": "Roblox",
-    "coverPhoto": "https://example.com/images/roblox.png",
+    "coverPhoto": "https://i.ibb.co.com/CKQ15Z7b/image12.jpg",
     "category": "Sandbox",
     "downloadLink": "https://www.roblox.com/",
     "description": "Roblox is an online platform where players can create, share, and explore millions of immersive games and experiences.",
