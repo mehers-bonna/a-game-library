@@ -15,7 +15,7 @@ const NavBar = () => {
         tabIndex={0}
         className="menu menu-sm dropdown-content ">
         <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/browseGames'>BrowseGames</NavLink></li>
+        <li><NavLink to='/browsegames'>BrowseGames</NavLink></li>
         <li><NavLink to='/developers'>Developers</NavLink></li>
       </ul>
     </div>
@@ -25,7 +25,7 @@ const NavBar = () => {
   <div className="navbar-center hidden lg:flex">
     <ul className="flex gap-3 text-md ">
       <li><NavLink className="hover:underline hover:text-[#632EE3]" to='/'>Home</NavLink></li>
-      <li><NavLink className="hover:underline hover:text-[#632EE3]" to='/browseGames'>BrowseGames</NavLink></li>
+      <li><NavLink className="hover:underline hover:text-[#632EE3]" to='/browsegames'>BrowseGames</NavLink></li>
       <li><NavLink className="hover:underline hover:text-[#632EE3]" to='/developers'>Developers</NavLink></li>
     </ul>
   </div>

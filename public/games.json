@@ -1,0 +1,122 @@
+[
+  {
+    "id": "1",
+    "title": "Player Unknowns Battle Ground: PUBG",
+    "coverPhoto": "https://example.com/images/pubg.png",
+    "category": "FPS",
+    "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
+    "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps.",
+    "ratings": "4.5",
+    "developer": "Krafton"
+  },
+  {
+    "id": "2",
+    "title": "Call of Duty: Mobile",
+    "coverPhoto": "https://example.com/images/cod.png",
+    "category": "FPS",
+    "downloadLink": "https://www.callofduty.com/mobile",
+    "description": "Call of Duty: Mobile brings classic multiplayer maps and modes to your mobile device, offering intense FPS action.",
+    "ratings": "4.6",
+    "developer": "Activision"
+  },
+  {
+    "id": "3",
+    "title": "Fortnite",
+    "coverPhoto": "https://example.com/images/fortnite.png",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.epicgames.com/fortnite/en-US/home",
+    "description": "Fortnite is a battle royale game known for its building mechanics, colorful graphics, and fast-paced combat.",
+    "ratings": "4.4",
+    "developer": "Epic Games"
+  },
+  {
+    "id": "4",
+    "title": "Apex Legends Mobile",
+    "coverPhoto": "https://example.com/images/apex.png",
+    "category": "FPS",
+    "downloadLink": "https://www.ea.com/games/apex-legends",
+    "description": "Apex Legends Mobile is a hero-based battle royale shooter with unique characters, abilities, and fast squad gameplay.",
+    "ratings": "4.3",
+    "developer": "Respawn Entertainment"
+  },
+  {
+    "id": "5",
+    "title": "Garena Free Fire",
+    "coverPhoto": "https://example.com/images/freefire.png",
+    "category": "Battle Royale",
+    "downloadLink": "https://ff.garena.com/",
+    "description": "Free Fire is a survival shooter where 50 players fight to be the last person standing on a remote island.",
+    "ratings": "4.2",
+    "developer": "Garena"
+  },
+  {
+    "id": "6",
+    "title": "Minecraft",
+    "coverPhoto": "https://example.com/images/minecraft.png",
+    "category": "Sandbox",
+    "downloadLink": "https://www.minecraft.net/en-us",
+    "description": "Minecraft lets players build, explore, and survive in a block-based world full of endless possibilities.",
+    "ratings": "4.7",
+    "developer": "Mojang Studios"
+  },
+  {
+    "id": "7",
+    "title": "Genshin Impact",
+    "coverPhoto": "https://example.com/images/genshin.png",
+    "category": "RPG",
+    "downloadLink": "https://genshin.hoyoverse.com/",
+    "description": "Genshin Impact is an open-world action RPG with elemental combat, stunning visuals, and a rich storyline.",
+    "ratings": "4.5",
+    "developer": "miHoYo"
+  },
+  {
+    "id": "8",
+    "title": "Among Us",
+    "coverPhoto": "https://example.com/images/amongus.png",
+    "category": "Party",
+    "downloadLink": "https://www.innersloth.com/gameAmongUs.php",
+    "description": "Among Us is a multiplayer party game where crewmates must complete tasks while impostors sabotage their mission.",
+    "ratings": "4.0",
+    "developer": "Innersloth"
+  },
+  {
+    "id": "9",
+    "title": "Clash of Clans",
+    "coverPhoto": "https://example.com/images/coc.png",
+    "category": "Strategy",
+    "downloadLink": "https://supercell.com/en/games/clashofclans/",
+    "description": "Clash of Clans is a strategy game where players build villages, raise armies, and attack other players.",
+    "ratings": "4.3",
+    "developer": "Supercell"
+  },
+  {
+    "id": "10",
+    "title": "League of Legends: Wild Rift",
+    "coverPhoto": "https://example.com/images/wildrift.png",
+    "category": "MOBA",
+    "downloadLink": "https://wildrift.leagueoflegends.com/",
+    "description": "Wild Rift brings the popular MOBA experience of League of Legends to mobile with fast-paced 5v5 matches.",
+    "ratings": "4.4",
+    "developer": "Riot Games"
+  },
+  {
+    "id": "11",
+    "title": "Valorant Mobile",
+    "coverPhoto": "https://example.com/images/valorant.png",
+    "category": "FPS",
+    "downloadLink": "https://playvalorant.com/",
+    "description": "Valorant Mobile is a tactical shooter with unique agents, strategic abilities, and competitive gameplay.",
+    "ratings": "4.5",
+    "developer": "Riot Games"
+  },
+  {
+    "id": "12",
+    "title": "Roblox",
+    "coverPhoto": "https://example.com/images/roblox.png",
+    "category": "Sandbox",
+    "downloadLink": "https://www.roblox.com/",
+    "description": "Roblox is an online platform where players can create, share, and explore millions of immersive games and experiences.",
+    "ratings": "4.2",
+    "developer": "Roblox Corporation"
+  }
+]

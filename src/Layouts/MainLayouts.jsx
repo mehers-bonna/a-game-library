@@ -1,12 +1,15 @@
 import React from 'react';
 import NavBar from '../Components/NavBar';
 import Banner from '../Components/Banner';
-import { Outlet } from 'react-router';
+import { Outlet, useLocation } from 'react-router';
 import Footer from '../Components/Footer';
+import NewsLetter from './../Components/NewsLetter';
+
 
 const MainLayouts = () => {
+    const location = useLocation()
     return (
-        <div className='flex flex-col min-h-screen'>
+        <div className='flex flex-col '>
             <NavBar></NavBar>
             {/* {isLoading && (
                 <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
@@ -15,10 +18,11 @@ const MainLayouts = () => {
                     </h1>
                 </div>
             )} */}
-            <div className='flex-1 w-11/12 mx-auto'>
+            <div className='flex-1 w-11/12 mx-auto min-h-screen'>
                 {location.pathname === "/" && <Banner />}
                 <Outlet></Outlet>
             </div>
+            <NewsLetter></NewsLetter>
             <Footer></Footer>
         </div>
     );
