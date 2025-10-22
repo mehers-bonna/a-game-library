@@ -4,6 +4,7 @@ import ErrorPage from "../Pages/ErrorPage";
 import Home from "../Pages/Home";
 import BrowseGames from './../Pages/BrowseGames';
 import Developers from './../Pages/Developers';
+import GameDetails from "../Pages/GameDetails";
 
 
 
@@ -26,10 +27,10 @@ const router = createBrowserRouter([
                 path: "/developers",
                Component: Developers,
             },
-            // {
-            //     path: '/app/:id',
-            //     element: <AppDetails></AppDetails>
-            // },
+            {
+                path: '/game/:id',
+                Component: GameDetails,
+            },
             {
                 path: "*",
                 Component: ErrorPage,

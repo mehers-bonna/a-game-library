@@ -1,8 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
 
 const GameCard = ({ game }) => {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate(`/game/${game.id}`);
+    };
     return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden w-[350px] p-6 hover:shadow cursor-pointer hover:scale-105">
+    <div onClick={handleClick} className="bg-white rounded-lg shadow-md overflow-hidden w-[350px] p-6 hover:shadow cursor-pointer hover:scale-105">
       <img
         src={game.coverPhoto}
         alt={game.title}
@@ -11,11 +17,11 @@ const GameCard = ({ game }) => {
       <div className="p-4">
         <h2 className="text-lg font-semibold">{game.title}</h2>
         <p className="text-sm text-gray-500">{game.category}</p>
-        <div className="flex items-center mt-2">
+        <div className="my-3">
           <div className="flex text-yellow-400">
-            {Array.from({ length: Math.floor(game.ratings) }).map((_, idx) => (
+            {Array.from({ length: Math.floor(game.ratings) }).map((item, index) => (
               <svg
-                key={idx}
+                key={index}
                 className="w-4 h-4 fill-current"
                 viewBox="0 0 20 20"
               >
@@ -23,7 +29,7 @@ const GameCard = ({ game }) => {
               </svg>
             ))}
           </div>
-          <span className="ml-2 text-gray-600">{game.ratings}</span>
+          <span className=" text-gray-600">{game.ratings}</span>
         </div>
       </div>
     </div>
