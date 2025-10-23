@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router';
 import logo from '../assets/logo.jpg';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const NavBar = () => {
+  // const {user} = use(AuthContext);
     return (
         <div className="navbar bg-base-100 shadow-sm">
+          {/* <div>{user && user.email}</div> */}
   <div className="w-11/12 mx-auto flex justify-between items-center">
     <div className="navbar-start ">
     <div className="dropdown">
