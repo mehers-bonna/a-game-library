@@ -2,6 +2,7 @@ import React, { use, useContext, useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
+import { toast } from 'react-toastify';
 
 const Login = () => {
   const {logIn} = useContext(AuthContext);
@@ -31,10 +32,12 @@ const Login = () => {
     .then((result) => {
      const user = result.user;
      console.log(user)
+     toast.success("Login successful.");
      navigate(location.state?.from || "/");
     })
     .catch((err) => {
-        setError(err.message); 
+        setError(err.message);
+        toast.error("Login failed! Please check your credentials.");
       });
 
   }

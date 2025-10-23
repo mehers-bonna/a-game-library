@@ -2,6 +2,7 @@ import React, { use, useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
+import { toast } from 'react-toastify';
 
 const Register = () => {
   const {createUser, setUser, updateUser} = use(AuthContext);
@@ -32,17 +33,20 @@ const Register = () => {
       updateUser({displayName: name, photoURL: photo})
       .then(() => {
         setUser({...user, displayName: name, photoURL: photo});
+        toast.success("Registration successful. 🎉");
         navigate('/')
       })
       .catch((error) => {
        console.log(error)
        setUser(user)
+       toast.warn("Profile updated partially. Please check again.");
       });
       
     })
     .catch((error) => {
       const errorMessage = error.message;
       setError(errorMessage)
+      toast.error(`Registration failed: ${errorMessage}`);
     })
   }
     return (

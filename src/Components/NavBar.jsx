@@ -3,6 +3,7 @@ import { Link, NavLink, useNavigate } from 'react-router';
 import logo from '../assets/logo.jpg';
 import { AuthContext } from '../Provider/AuthProvider';
 import userProfile from '../assets/userprofile.jpg';
+import { toast } from 'react-toastify';
 
 const NavBar = () => {
   const {user, logOut} = use(AuthContext);
@@ -11,9 +12,10 @@ const NavBar = () => {
     console.log("user trying to log out")
     logOut()
    .then(() => {
-  alert("you logged out successfully")
+  toast.success("You logged out successfully.");
+  navigate("/");
 }).catch((error) => {
-  console.log(error)
+  toast.error(error.message)
 });
   }
 
@@ -37,7 +39,7 @@ const NavBar = () => {
         tabIndex={0}
         className="menu menu-sm dropdown-content ">
         <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/browsegames'>BrowseGames</NavLink></li>
+        <li><NavLink to='/browseGames'>BrowseGames</NavLink></li>
         <li><NavLink to='/developers'>Developers</NavLink></li>
       </ul>
     </div>
@@ -47,7 +49,7 @@ const NavBar = () => {
   <div className="navbar-center hidden lg:flex">
     <ul className="flex gap-3 text-md ">
       <li><NavLink className="hover:underline hover:text-[#632EE3]" to='/'>Home</NavLink></li>
-      <li><NavLink className="hover:underline hover:text-[#632EE3]" to='/browsegames'>BrowseGames</NavLink></li>
+      <li><NavLink className="hover:underline hover:text-[#632EE3]" to='/browseGames'>BrowseGames</NavLink></li>
       <li><NavLink className="hover:underline hover:text-[#632EE3]" to='/developers'>Developers</NavLink></li>
     </ul>
   </div>
@@ -56,7 +58,7 @@ const NavBar = () => {
     className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white"> Login</Link>}
 
     {
-      user ? <Link to='/auth/myProfile'><img onClick={handleProfileClick} className='w-[40px] h-[40px] rounded-full' src={`${user ? user.photoURL : userProfile}`} alt="" /></Link> : <Link to='/auth/register'
+      user ? <Link to='/auth/myProfile'><img onClick={handleProfileClick} className='w-10 h-10 rounded-full' src={`${user ? user.photoURL : userProfile}`} alt="" /></Link> : <Link to='/auth/register'
     className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white"> Register</Link>
     }
     

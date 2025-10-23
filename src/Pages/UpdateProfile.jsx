@@ -3,6 +3,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 import { Link, useNavigate } from 'react-router';
 import { getAuth, updateProfile } from 'firebase/auth';
 import app from '../Firebase/firebase.config';
+import { toast } from 'react-toastify';
 
 const UpdateProfile = () => {
 
@@ -24,14 +25,14 @@ const UpdateProfile = () => {
       photoURL: photo
     })
       .then(() => {
-        alert('Profile updated successfully!');
+        toast.success('Profile updated successfully. 🎉');
         console.log('Updated Info:', { name, photo });
 
         navigate('/auth/myProfile');
       })
       .catch((error) => {
         console.error('Error updating profile:', error);
-        alert('Something went wrong! Check console for details.');
+        toast.error('Something went wrong! Please try again.');
       });
   };
     return (
