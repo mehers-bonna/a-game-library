@@ -8,6 +8,10 @@ import GameDetails from "../Pages/GameDetails";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import AuthLayout from "../Layouts/AuthLayout";
+import PrivateRoute from "../Provider/PrivateRoute";
+import MyProfile from "../Pages/MyProfile";
+import UpdateProfile from "../Pages/UpdateProfile";
+import ForgetPassword from "../Pages/ForgetPassword";
 
 
 
@@ -16,11 +20,11 @@ const router = createBrowserRouter([
         path: '/',
         element: <MainLayouts></MainLayouts>,
         errorElement: <ErrorPage></ErrorPage>,
-         hydrateFallbackElement: <p>Loading....</p>,
-         children: [
+        hydrateFallbackElement: <p>Loading....</p>,
+        children: [
             {
                 index: true,
-                Component:Home,
+                Component: Home,
             },
             {
                 path: "/browseGames",
@@ -28,11 +32,13 @@ const router = createBrowserRouter([
             },
             {
                 path: "/developers",
-               Component: Developers,
+                Component: Developers,
             },
             {
                 path: '/game/:id',
-                Component: GameDetails,
+                element: <PrivateRoute>
+                    <GameDetails></GameDetails>
+                </PrivateRoute>,
             },
             {
                 path: "*",
@@ -44,14 +50,26 @@ const router = createBrowserRouter([
         path: '/auth',
         element: <AuthLayout></AuthLayout>,
         children: [
-           {
-            path: 'login',
-            Component: Login,
-           },
-           {
-            path: 'register',
-            Component: Register,
-           },
+            {
+                path: 'login',
+                Component: Login,
+            },
+            {
+                path: 'register',
+                Component: Register,
+            },
+            {
+                path: 'myProfile',
+                Component: MyProfile,
+            },
+            {
+                path: 'updateProfile',
+                Component: UpdateProfile,
+            },
+            {
+                path: 'forgetPassword',
+                Component: ForgetPassword,
+            },
         ],
     },
     // {

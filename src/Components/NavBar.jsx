@@ -1,13 +1,32 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router';
+import React, { use } from 'react';
+import { Link, NavLink, useNavigate } from 'react-router';
 import logo from '../assets/logo.jpg';
 import { AuthContext } from '../Provider/AuthProvider';
+import userProfile from '../assets/userprofile.jpg';
 
 const NavBar = () => {
-  // const {user} = use(AuthContext);
+  const {user, logOut} = use(AuthContext);
+  const navigate = useNavigate();
+  const handleLogOut = () => {
+    console.log("user trying to log out")
+    logOut()
+   .then(() => {
+  alert("you logged out successfully")
+}).catch((error) => {
+  console.log(error)
+});
+  }
+
+
+   const handleProfileClick = () => {
+    navigate('/myProfile');
+  };
+
+
+
     return (
-        <div className="navbar bg-base-100 shadow-sm">
-          {/* <div>{user && user.email}</div> */}
+        <div>
+          <div className="navbar bg-base-100 shadow-sm">
   <div className="w-11/12 mx-auto flex justify-between items-center">
     <div className="navbar-start ">
     <div className="dropdown">
@@ -33,13 +52,20 @@ const NavBar = () => {
     </ul>
   </div>
   <div className="navbar-end space-x-3">
-    <Link to='/auth/login'
-    className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white"> Login</Link>
-    <Link to='/auth/register'
+    {user ? <button onClick={handleLogOut} className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white">Log Out</button> : <Link to='/auth/login'
+    className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white"> Login</Link>}
+
+    {
+      user ? <Link to='/auth/myProfile'><img onClick={handleProfileClick} className='w-[40px] h-[40px] rounded-full' src={`${user ? user.photoURL : userProfile}`} alt="" /></Link> : <Link to='/auth/register'
     className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white"> Register</Link>
+    }
+    
+    
   </div>
   </div>
-</div>
+      </div>
+      <div>{user && user.email}</div>
+        </div>
     );
 };
 
