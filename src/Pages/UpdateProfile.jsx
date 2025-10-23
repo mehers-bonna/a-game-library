@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { Link, useNavigate } from 'react-router';
-import { updateProfile } from 'firebase/auth';
+import { getAuth, updateProfile } from 'firebase/auth';
+import app from '../Firebase/firebase.config';
 
 const UpdateProfile = () => {
 
@@ -12,12 +13,13 @@ const UpdateProfile = () => {
 
   const handleUpdate = (e) => {
     e.preventDefault();
+     const auth = getAuth(app);
 
-     if (!user) {
+     if (!auth.currentUser) {
       alert('User not found! Please log in again.');
       return;
     }
-    updateProfile(user, {
+    updateProfile(auth.currentUser, {
       displayName: name,
       photoURL: photo
     })
