@@ -22,7 +22,7 @@ const MainLayouts = () => {
                 {location.pathname === "/" && <Banner />}
                 <Outlet></Outlet>
             </div>
-            <NewsLetter></NewsLetter>
+            {location.pathname === "/" && <NewsLetter/>}
             <Footer></Footer>
         </div>
     );

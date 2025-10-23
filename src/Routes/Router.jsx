@@ -5,6 +5,9 @@ import Home from "../Pages/Home";
 import BrowseGames from './../Pages/BrowseGames';
 import Developers from './../Pages/Developers';
 import GameDetails from "../Pages/GameDetails";
+import Login from "../Pages/Login";
+import Register from "../Pages/Register";
+import AuthLayout from "../Layouts/AuthLayout";
 
 
 
@@ -37,10 +40,20 @@ const router = createBrowserRouter([
             }
         ]
     },
-    // {
-    //     path: '/auth',
-    //     element: <h2>authentication layout</h2>
-    // },
+    {
+        path: '/auth',
+        element: <AuthLayout></AuthLayout>,
+        children: [
+           {
+            path: 'login',
+            Component: Login,
+           },
+           {
+            path: 'register',
+            Component: Register,
+           },
+        ],
+    },
     // {
     //     path: '/game',
     //     element: <h2>game layout</h2>

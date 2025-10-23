@@ -30,10 +30,10 @@ const NavBar = () => {
     </ul>
   </div>
   <div className="navbar-end space-x-3">
-    <NavLink
-    className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white"> Login</NavLink>
-    <NavLink
-    className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white"> Register</NavLink>
+    <Link to='/auth/login'
+    className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white"> Login</Link>
+    <Link to='/auth/register'
+    className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white"> Register</Link>
   </div>
   </div>
 </div>

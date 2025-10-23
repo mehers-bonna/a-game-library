@@ -1,4 +1,5 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import React, { useState, useEffect } from 'react';
 import banner1 from '../assets/banner1.jpg';
 import banner2 from '../assets/banner2.jpg';
@@ -19,7 +20,7 @@ const Banner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 3000); // change every 3 seconds
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -48,7 +49,6 @@ const Banner = () => {
             />
           </AnimatePresence>
 
-          {/* Controls */}
           <button
             onClick={prevSlide}
             className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-full"
