@@ -29,7 +29,7 @@ const MyProfile = () => {
         <Link to='/auth/updateProfile'
         type='submit'
           onClick={handleUpdateClick}
-          className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white mt-4"
+          className="btn bg-[#9F62F2] text-white mt-4"
         >
           Update Profile
         </Link>

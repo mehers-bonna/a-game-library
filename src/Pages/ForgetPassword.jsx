@@ -15,7 +15,6 @@ const ForgetPassword = () => {
     sendPasswordResetEmail(auth, email)
       .then(() => {
         setMessage('Password reset email sent! Redirecting to Gmail...');
-        // Redirect to Gmail after 2 seconds
         setTimeout(() => {
           window.location.href = 'https://mail.google.com/';
         }, 2000);
@@ -38,7 +37,7 @@ const ForgetPassword = () => {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <button type="submit" className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white mt-2">
+          <button type="submit" className="btn bg-[#9F62F2] text-white mt-2">
             Reset Password
           </button>
           {message && <p className='text-green-700 text-xs mt-2'>{message}</p>}

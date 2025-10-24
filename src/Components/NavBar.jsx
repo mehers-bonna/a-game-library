@@ -54,12 +54,12 @@ const NavBar = () => {
     </ul>
   </div>
   <div className="navbar-end space-x-3">
-    {user ? <button onClick={handleLogOut} className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white">Log Out</button> : <Link to='/auth/login'
-    className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white"> Login</Link>}
+    {user ? <button onClick={handleLogOut} className="btn bg-[#9F62F2] text-white">Log Out</button> : <Link to='/auth/login'
+    className="btn bg-[#9F62F2] text-white"> Login</Link>}
 
     {
       user ? <Link to='/auth/myProfile'><img onClick={handleProfileClick} className='w-10 h-10 rounded-full' src={`${user ? user.photoURL : userProfile}`} alt="" /></Link> : <Link to='/auth/register'
-    className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white"> Register</Link>
+    className="btn bg-[#9F62F2] text-white"> Register</Link>
     }
     
     

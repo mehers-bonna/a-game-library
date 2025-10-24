@@ -41,7 +41,7 @@ const Banner = () => {
               key={slides[index].id}
               src={slides[index].image}
               alt="Banner"
-              className="w-full h-[1000px] object-cover"
+              className="w-full h-full object-cover"
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -100 }}

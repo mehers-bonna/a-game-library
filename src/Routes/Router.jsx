@@ -72,14 +72,6 @@ const router = createBrowserRouter([
             },
         ],
     },
-    // {
-    //     path: '/game',
-    //     element: <h2>game layout</h2>
-    // },
-    // {
-    //     path: '/*',
-    //     element: <h2>error404</h2>
-    // },
 ])
 
 export default router;

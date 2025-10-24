@@ -64,7 +64,7 @@ const UpdateProfile = () => {
 
         <button
           type="submit"
-          className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white w-full"
+          className="btn bg-[#9F62F2] text-white w-full"
         >
           Update Information
         </button>

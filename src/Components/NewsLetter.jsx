@@ -13,7 +13,7 @@ const NewsLetter = () => {
                             placeholder="Enter your email"
                             className="px-4 py-2 rounded-md border border-gray-300 flex-1"
                         />
-                        <button className="px-6 py-2 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white rounded-md">
+                        <button className="px-6 py-2 bg-[#9F62F2] text-white rounded-md">
                             Subscribe
                         </button>
                     </form>

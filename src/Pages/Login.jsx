@@ -1,4 +1,4 @@
-import React, { use, useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
@@ -16,7 +16,7 @@ const Login = () => {
     navigate('/auth/forgetPassword', { state: { email } });
   };
 
-  console.log(location)
+  // console.log(location)
   const handleLogin = (e) => {
     e.preventDefault();
     // const email = e.target.email.value;
@@ -27,11 +27,11 @@ const Login = () => {
       setError('Password must have at least 1 uppercase, 1 lowercase, and 6 characters long.');
       return; 
     }
-    console.log({email, password});
+    // console.log({email, password});
     logIn(email, password)
     .then((result) => {
      const user = result.user;
-     console.log(user)
+    //  console.log(user)
      toast.success("Login successful.");
      navigate(location.state?.from || "/");
     })
@@ -74,7 +74,7 @@ const Login = () => {
            {error && <p className='text-red-700 text-xs'>{error}</p> }
 
           <button type='button' className="btn  mt-2"><span><FcGoogle /></span> Login With Google</button>
-          <button type='submit' className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white mt-2">Login</button>
+          <button type='submit' className="btn bg-[#9F62F2] text-white mt-2">Login</button>
           <p className='font-semibold text-center'>Don't Have An Account ? <Link to='/auth/register' className='text-red-700'>Register</Link></p>
         </fieldset>
       </form>

@@ -12,7 +12,7 @@ const Register = () => {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    console.log(e.target)
+    // console.log(e.target)
     const name = e.target.name.value;
     const photo = e.target.photo.value;
     const email = e.target.email.value;
@@ -25,7 +25,7 @@ const Register = () => {
       return; 
     }
 
-    console.log({name, photo, email, password})
+    // console.log({name, photo, email, password})
     createUser(email, password)
     .then(result => {
       const user = result.user;
@@ -94,7 +94,7 @@ const Register = () => {
                    {error && <p className='text-red-700 text-xs'>{error}</p> }
 
                   <button className="btn  mt-2"><span><FcGoogle /></span> Login With Google</button>
-                  <button type='submit' className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white mt-2">Register</button>
+                  <button type='submit' className="btn bg-[#9F62F2] text-white mt-2">Register</button>
                   <p className='font-semibold text-center'>Already Have An Account ? <Link to='/auth/login' className='text-red-700'>Login</Link></p>
                 </fieldset>
               </form>

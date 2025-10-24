@@ -44,7 +44,7 @@ const GameDetails = () => {
             <a
                 href={game.downloadLink}
                 
-                className="inline-block mt-6 px-6 py-3 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white rounded-lg"
+                className="inline-block mt-6 px-6 py-3 bg-[#9F62F2] text-white rounded-lg"
             >
                 Download
             </a>
