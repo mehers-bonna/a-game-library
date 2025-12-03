@@ -45,7 +45,7 @@ const Developers = () => {
                 href={dev.downloadLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-lg font-medium transition"
+                className="inline-block bg-purple-600 text-white px-5 py-2 rounded-lg font-medium transition"
               >
                 Visit Game
               </a>

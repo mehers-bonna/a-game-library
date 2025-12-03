@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 
 const GameCard = ({ game }) => {
     const navigate = useNavigate();
@@ -23,7 +23,10 @@ const GameCard = ({ game }) => {
                     <span key={index}>★</span>
                 ))}
           </div>
-          <span className=" text-gray-600">{game.ratings}</span>
+          <div className='flex flex-row justify-between'>
+            <span className=" text-gray-600">{game.ratings}</span>
+          <Link to='/game/:id' className='bg-purple-600 text-white px-5 py-2 rounded-full'>See More</Link>
+          </div>
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ const MainLayouts = () => {
     return (
         <div className='flex flex-col '>
             <NavBar></NavBar>
-            <div className='flex-1 w-11/12 mx-auto '>
+            <div className='flex-1 '>
                 {location.pathname === "/" && <Banner />}
                 <Outlet></Outlet>
             </div>

@@ -24,7 +24,6 @@ const NavBar = () => {
     navigate('/myProfile');
   };
 
-  // 🔥 Reusable smooth underline style
   const linkStyle = ({ isActive }) =>
     isActive
       ? "relative text-[#632EE3] font-semibold after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[2px] after:bg-[#632EE3] after:rounded-full after:transition-all after:duration-300"
@@ -33,7 +32,7 @@ const NavBar = () => {
   return (
     <div className="py-2 sticky top-0 z-50 bg-transparent">
       {/* Only navbar area has background */}
-      <div className="navbar w-10/12 mx-auto shadow-sm rounded-xl px-4 bg-purple-100">
+      <div className="navbar w-9/12 mx-auto shadow-sm rounded-xl px-4 bg-purple-100">
 
         {/* LEFT */}
         <div className="navbar-start">
