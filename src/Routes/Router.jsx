@@ -12,6 +12,8 @@ import PrivateRoute from "../Provider/PrivateRoute";
 import MyProfile from "../Pages/MyProfile";
 import UpdateProfile from "../Pages/UpdateProfile";
 import ForgetPassword from "../Pages/ForgetPassword";
+import About from "../Pages/About";
+import Contact from "../Pages/Contact";
 
 
 
@@ -35,10 +37,16 @@ const router = createBrowserRouter([
                 Component: Developers,
             },
             {
+                path: "/about",
+                Component: About,
+            },
+            {
+                path: "/contact",
+                Component: Contact,
+            },
+            {
                 path: '/game/:id',
-                element: <PrivateRoute>
-                    <GameDetails></GameDetails>
-                </PrivateRoute>,
+                element: <GameDetails></GameDetails>
             },
             {
                 path: "*",

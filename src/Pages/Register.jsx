@@ -94,7 +94,7 @@ const Register = () => {
                    {error && <p className='text-red-700 text-xs'>{error}</p> }
 
                   <button className="btn  mt-2"><span><FcGoogle /></span> Login With Google</button>
-                  <button type='submit' className="btn bg-[#9F62F2] text-white mt-2">Register</button>
+                  <button type='submit' className="btn bg-purple-600 text-white mt-2">Register</button>
                   <p className='font-semibold text-center'>Already Have An Account ? <Link to='/auth/login' className='text-red-700'>Login</Link></p>
                 </fieldset>
               </form>

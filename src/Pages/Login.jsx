@@ -74,7 +74,7 @@ const Login = () => {
            {error && <p className='text-red-700 text-xs'>{error}</p> }
 
           <button type='button' className="btn  mt-2"><span><FcGoogle /></span> Login With Google</button>
-          <button type='submit' className="btn bg-[#9F62F2] text-white mt-2">Login</button>
+          <button type='submit' className="btn bg-purple-600 text-white mt-2">Login</button>
           <p className='font-semibold text-center'>Don't Have An Account ? <Link to='/auth/register' className='text-red-700'>Register</Link></p>
         </fieldset>
       </form>
