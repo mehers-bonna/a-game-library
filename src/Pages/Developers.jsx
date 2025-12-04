@@ -1,51 +1,59 @@
 import React, { useEffect, useState } from 'react';
 
 const Developers = () => {
-    const [developers, setDevelopers] = useState([]);
+  const [developers, setDevelopers] = useState([]);
 
-     useEffect(() => {
-    fetch('/games.json')
+  useEffect(() => {
+    fetch("/games.json")
       .then((res) => res.json())
       .then((data) => setDevelopers(data));
   }, []);
-    return (
-         <div className="w-8/12 mx-auto mt-10">
-      <h1 className="text-3xl md:text-4xl font-bold text-center mb-10">
+
+  return (
+    <div className="min-h-screen bg-white py-16 px-4">
+      
+      {/* Title */}
+      <h1 className="text-4xl font-bold text-center text-gray-900 mb-14">
         Developer Spotlight
       </h1>
 
-      <div className="grid gap-10">
+      {/* Developer List */}
+      <div className="max-w-6xl mx-auto space-y-14">
         {developers.map((dev) => (
           <div
             key={dev.id}
-            className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-md overflow-hidden p-6 md:p-8"
+            className="bg-white border border-gray-200 rounded-3xl shadow-xl overflow-hidden 
+                       hover:shadow-2xl transition-all duration-300 p-8 md:flex md:items-center"
           >
-            {/* Left side image */}
-            <div className="w-full md:w-1/2">
+            {/* Left Image */}
+            <div className="md:w-1/2">
               <img
                 src={dev.coverPhoto}
                 alt={dev.developer}
-                className="rounded-xl w-full h-[500px] object-cover"
+                className="w-full h-[420px] object-cover rounded-2xl shadow-md"
               />
             </div>
 
-            {/* Right side text */}
-            <div className="w-full md:w-1/2 mt-6 md:mt-0 md:pl-10">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+            {/* Right Content */}
+            <div className="md:w-1/2 md:pl-10 mt-8 md:mt-0">
+              <h2 className="text-3xl font-bold text-gray-900 mb-3">
                 {dev.developer}
               </h2>
-              <p className="text-gray-600 mb-3">
+
+              <p className="text-gray-700 text-lg mb-3">
                 Creator of{" "}
-                <span className="font-semibold text-indigo-600">
-                  {dev.title}
-                </span>
+                <span className="font-semibold text-purple-600">{dev.title}</span>
               </p>
-              <p className="text-gray-500 text-sm mb-4">{dev.description}</p>
+
+              <p className="text-gray-600 leading-relaxed mb-6">
+                {dev.description}
+              </p>
+
               <a
                 href={dev.downloadLink}
                 target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-purple-600 text-white px-5 py-2 rounded-lg font-medium transition"
+                className="inline-block bg-purple-600 text-white px-7 py-3 rounded-xl 
+                           text-lg shadow-md transition-all duration-300"
               >
                 Visit Game
               </a>
@@ -54,7 +62,7 @@ const Developers = () => {
         ))}
       </div>
     </div>
-    );
+  );
 };
 
 export default Developers;

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 
 const GameDetails = () => {
-    const { id } = useParams();
+  const { id } = useParams();
   const [game, setGame] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -16,7 +16,6 @@ const GameDetails = () => {
         setLoading(false);
       })
       .catch((err) => {
-        console.error(err);
         setError(err.message);
         setLoading(false);
       });
@@ -25,31 +24,65 @@ const GameDetails = () => {
   if (loading) return <p className="text-center mt-10">Loading...</p>;
   if (error) return <p className="text-center mt-10 text-red-500">{error}</p>;
   if (!game) return <p className="text-center mt-10">Game not found</p>;
-    return (
-         <div className="max-w-5xl mx-auto p-8">
-            <h1 className="text-2xl font-bold mb-4">{game.title}</h1>
-            <img
-                src={game.coverPhoto}
-                alt={game.title}
-                className="w-[600px] h-[500px] object-cover rounded-2xl my-5 "
-            />
-            <p className="text-gray-600 mb-2"><strong>Developer:</strong> {game.developer}</p>
-            <p className="text-gray-600 mb-2"><strong>Category:</strong> {game.category}</p>
-            <p className="text-yellow-400 mb-2">
-                {Array.from({ length: Math.floor(game.ratings) }).map((item, index) => (
-                    <span key={index}>★</span>
-                ))} {game.ratings}
-            </p>
-            <p className="mt-4">{game.description}</p>
-            <a
-                href={game.downloadLink}
-                
-                className="inline-block mt-6 px-6 py-3 bg-purple-600 text-white rounded-lg"
-            >
-                Download
-            </a>
+
+  return (
+    <div className="min-h-screen bg-white py-16 px-4 flex justify-center">
+      <div className="max-w-4xl w-full bg-white border border-gray-200 p-10 rounded-3xl shadow-xl">
+
+        {/* Title */}
+        <h1 className="text-4xl font-bold text-gray-900 text-center mb-8">
+          {game.title}
+        </h1>
+
+        {/* Image */}
+        <div className="flex justify-center">
+          <img
+            src={game.coverPhoto}
+            alt={game.title}
+            className="w-[650px] h-[420px] object-cover rounded-2xl shadow-lg"
+          />
         </div>
-    );
+
+        {/* Details */}
+        <div className="mt-10 space-y-3 text-lg text-gray-700">
+          <p>
+            <span className="font-semibold text-gray-900">Developer:</span> {game.developer}
+          </p>
+          <p>
+            <span className="font-semibold text-gray-900">Category:</span> {game.category}
+          </p>
+
+          {/* Ratings */}
+          <p className="flex items-center gap-2">
+            <span className="font-semibold text-gray-900">Ratings:</span>
+            <span className="text-yellow-400 text-xl">
+              {Array.from({ length: Math.floor(game.ratings) }).map((_, i) => (
+                <span key={i}>★</span>
+              ))}
+            </span>
+            <span className="text-gray-600">({game.ratings})</span>
+          </p>
+        </div>
+
+        {/* Description */}
+        <p className="mt-6 text-gray-800 leading-relaxed text-[17px]">
+          {game.description}
+        </p>
+
+        {/* Download Button */}
+        <div className="mt-12 text-center">
+          <a
+            href={game.downloadLink}
+            target="_blank"
+            className="px-8 py-3 bg-purple-600 text-white text-lg rounded-xl shadow-md hover:bg-gray-800 transition-all duration-300"
+          >
+            Download
+          </a>
+        </div>
+
+      </div>
+    </div>
+  );
 };
 
 export default GameDetails;
